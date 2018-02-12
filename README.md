@@ -7,4 +7,4 @@ Mestrado Integrado em Eng. Informática - 3.º ano - Universidade do Minho
 * Ana Paula Carvalho (@aplealcarvalho)
 * Guilherme Guerreiro (@)
 * João Pires Barreira (@jpiresbarreira)
-* José Bastos (@)
+* José Bastos (@zbastos)
