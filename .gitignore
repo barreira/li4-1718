@@ -1,1 +1,5 @@
 doc/*.tmp
+uml/*.vuk
+uml/*.vux
+uml/*.lck
+uml/*.bak*
