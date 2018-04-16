@@ -3,3 +3,4 @@ uml/*.vuk
 uml/*.vux*
 uml/*.lck
 uml/*.*bak*
+uml/.vpp-journal
