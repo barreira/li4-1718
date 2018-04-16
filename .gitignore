@@ -1,5 +1,5 @@
 doc/*.tmp
 uml/*.vuk
-uml/*.vux
+uml/*.vux*
 uml/*.lck
-uml/*.bak*
+uml/*.*bak*
