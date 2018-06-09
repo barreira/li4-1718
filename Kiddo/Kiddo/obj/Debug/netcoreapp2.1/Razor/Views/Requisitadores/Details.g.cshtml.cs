@@ -204,7 +204,7 @@ using Kiddo.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(1399, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5cb7b458d4044cd18125e11e387b2406", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "daacb49ec6fa4235bfa829541bc3484b", async() => {
                 BeginContext(1445, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -239,7 +239,7 @@ using Kiddo.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(1461, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18088d30ecaf4c3c8f8aa05f4821faa2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f60f43574360441bb2f6df5b04bbe270", async() => {
                 BeginContext(1483, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

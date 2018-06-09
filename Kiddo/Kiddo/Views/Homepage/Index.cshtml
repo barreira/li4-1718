@@ -1,7 +1,24 @@
 ﻿@{
-    ViewData["Title"] = "Movie List";
+    ViewData["Title"] = "Homepage";
 }
 
-<h2>My Movie List</h2>
+@section Styles{
+    <link href="@Url.Content("~/css/homepage.css")" rel="stylesheet" type="text/css" />
+}
 
-<p>Hello from our View Template!</p>
+<div class="logo">
+    <img class="mb-4" src="https://i.imgur.com/e3e0R8R.png" alt="" width="800" height="300">
+</div>
+
+<form class="form-signin" asp-controller="Homepage" asp-action="Index">
+    <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
+    <label for="inputEmail" class="sr-only">Endereço de e-mail</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de e-mail" required autofocus>
+    <label for="inputPassword" class="sr-only">Palavra-passe</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Palavra-passe" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+</form>
+
+<div class="signup">
+    <p>Quer ser babysitter?</p>
+</div>
