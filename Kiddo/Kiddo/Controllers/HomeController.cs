@@ -1,43 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Kiddo.Models;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Kiddo.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
 
-        public IActionResult About()
+        public ActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewBag.Message = "A nossa missão";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public ActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewBag.Message = "Estamos sempre disponíveis para o ajudar";
 
             return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

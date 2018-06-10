@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Web;
 
 namespace Kiddo.Models
 {
     public class Requisitador
     {
-        public int ID { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string Nome { get; set; }
-        public string Foto { get; set; }
-        public string Localizacao { get; set; }
-        public string Contacto { get; set; }
-        public string Pagamento { get; set; }
+        [Key]
+        public int Id { get; set; }
+
+        //[ForeignKey("ApplicationUserId")]
+        //public virtual ApplicationUser ApplicationUser { get; set; }
+        //public string ApplicationUserId { get; set; }
+
+        private string Email { get; set; }
+        public string Contact { get; set; }
+        public string Payment { get; set; }
     }
 }
