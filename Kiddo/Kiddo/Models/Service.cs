@@ -32,6 +32,10 @@ namespace Kiddo.Models
         [Display(Name = "Morada")]
         public string location { get; set; }
 
+        //[Required]
+        //[Display(Name = "Número de crianças")]
+        //public int numberChildren { get; set; }
+
         [Display(Name = "Informação extra")]
         public string extra { get; set; }
     }

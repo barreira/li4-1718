@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNet.Identity
+@model IEnumerable<Kiddo.Models.Service>
+
+@{
+    ViewBag.Title = "MyServices";
+    Layout = "~/Views/Shared/_BabysitterLayout.cshtml";
+}
+
+<h2>Os meus Serviços</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Babysitter.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Requisitador.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.extra)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.Babysitter.Email == @User.Identity.GetUserName())
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Babysitter.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Requisitador.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.duration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.extra)
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+
