@@ -22,7 +22,7 @@ namespace Kiddo.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Estamos sempre disponíveis para o ajudar";
+            ViewBag.Message = "Estamos sempre disponíveis para o ajudar!";
 
             return View();
         }

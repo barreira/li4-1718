@@ -16,8 +16,13 @@ namespace Kiddo.Models
         //public virtual ApplicationUser ApplicationUser { get; set; }
         //public string ApplicationUserId { get; set; }
 
-        private string Email { get; set; }
+        [Display(Name = "E-mail")]
+        public string Email { get; set; }
+
+        [Display(Name = "Contacto telefónico")]
         public string Contact { get; set; }
+
+        [Display(Name = "Dados de pagamento")]
         public string Payment { get; set; }
     }
 }

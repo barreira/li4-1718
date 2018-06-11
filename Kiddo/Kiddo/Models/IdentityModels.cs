@@ -22,6 +22,8 @@ namespace Kiddo.Models
     {
         public DbSet<Babysitter> Babysitters { get; set; }
         public DbSet<Requisitador> Requisitadors { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

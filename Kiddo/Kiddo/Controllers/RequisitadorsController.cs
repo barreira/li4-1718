@@ -46,7 +46,7 @@ namespace Kiddo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Contact,Payment")] Requisitador requisitador)
+        public ActionResult Create([Bind(Include = "Id,Email,Contact,Payment")] Requisitador requisitador)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Kiddo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Contact,Payment")] Requisitador requisitador)
+        public ActionResult Edit([Bind(Include = "Id,Email,Contact,Payment")] Requisitador requisitador)
         {
             if (ModelState.IsValid)
             {

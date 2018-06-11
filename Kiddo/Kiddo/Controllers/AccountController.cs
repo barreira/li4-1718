@@ -17,6 +17,7 @@ namespace Kiddo.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext _context = new ApplicationDbContext();
 
         public AccountController()
         {
@@ -79,6 +80,24 @@ namespace Kiddo.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    Admin admin = _context.Admins.SingleOrDefault(a => a.Email == model.Email);
+                    if (admin != null)
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
+
+                    Babysitter babysitter = _context.Babysitters.SingleOrDefault(b => b.Email == model.Email);
+                    if (babysitter != null)
+                    {
+                        return RedirectToAction("Index", "Babysitter");
+                    }
+
+                    Requisitador requisitador = _context.Requisitadors.SingleOrDefault(r => r.Email == model.Email);
+                    if (requisitador != null)
+                    {
+                        return RedirectToAction("Index", "Requisitador");
+                    }
+
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -155,7 +174,7 @@ namespace Kiddo.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link

@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    @Styles.Render("~/Content/Home.css");
+}
+
+<div class="jumbotron">
+    <img class="logo" src="https://i.imgur.com/e3e0R8R.png" alt="Kiddo Logo" />
+    <h2>Deixe os seus filhos em segurança</h2>
+    <p class="lead">A <strong>Kiddo</strong> é um serviço inovador e seguro que possibilita aos pais deixarem os seus filhos ao cuidado de profissionais especializados e certificados.</p>
+    <button onclick="location.href='@Url.Action("About", "Admin")';return false;" class="btn btn-primary btn-lg">Saiba mais &raquo</button>
+</div>

@@ -16,11 +16,22 @@ namespace Kiddo.Models
         //public virtual ApplicationUser ApplicationUser { get; set; }
         //public string ApplicationUserId { get; set; }
 
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
+
+        [Display(Name = "Nome")]
         public string Name { get; set; }
+
+        [Display(Name = "Idade")]
         public int Age { get; set; }
+
+        [Display(Name = "Foto")]
         public string Photo { get; set; }
+
+        [Display(Name = "Localização")]
         public string City { get; set; }
+
+        [Display(Name = "Preço/hora")]
         public decimal PricePerHour { get; set; }
     }
 }
