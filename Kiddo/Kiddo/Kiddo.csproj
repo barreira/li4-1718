@@ -240,6 +240,10 @@
     <Compile Include="Migrations\201806110247115_AddAdmin.Designer.cs">
       <DependentUpon>201806110247115_AddAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806111617276_AddNumberChildrenToService.cs" />
+    <Compile Include="Migrations\201806111617276_AddNumberChildrenToService.Designer.cs">
+      <DependentUpon>201806111617276_AddNumberChildrenToService.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -388,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806110247115_AddAdmin.resx">
       <DependentUpon>201806110247115_AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806111617276_AddNumberChildrenToService.resx">
+      <DependentUpon>201806111617276_AddNumberChildrenToService.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Lista de Serviços</h2>
@@ -13,10 +13,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Babysitter.Email)
+            Babysitter
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Requisitador.Email)
+            Requisitador
         </th>
         <th>
             @Html.DisplayNameFor(model => model.date)
@@ -26,6 +26,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numberChildren)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.extra)
@@ -49,6 +52,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberChildren)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.extra)

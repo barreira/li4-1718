@@ -49,13 +49,13 @@ namespace Kiddo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,RequisitadorId,BabysitterId,date,duration,location,extra")] Service service)
+        public ActionResult Create([Bind(Include = "Id,RequisitadorId,BabysitterId,date,duration,location,numberChildren,extra")] Service service)
         {
             if (ModelState.IsValid)
             {
                 db.Services.Add(service);
                 db.SaveChanges();
-                return RedirectToAction("Catalog", "Requisitador");
+                return RedirectToAction("Index");
             }
 
             ViewBag.BabysitterId = new SelectList(db.Babysitters, "Id", "Email", service.BabysitterId);
@@ -85,7 +85,7 @@ namespace Kiddo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,RequisitadorId,BabysitterId,date,duration,location,extra")] Service service)
+        public ActionResult Edit([Bind(Include = "Id,RequisitadorId,BabysitterId,date,duration,location,numberChildren,extra")] Service service)
         {
             if (ModelState.IsValid)
             {

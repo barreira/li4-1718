@@ -129,3 +129,4 @@ C:\Users\João Pires Barreira\Documents\GitHub\li4-1718\Kiddo\Kiddo\obj\Debug\Ki
 C:\Users\João Pires Barreira\Documents\GitHub\li4-1718\Kiddo\Kiddo\obj\Debug\Kiddo.Migrations.AddEmailToRequisitador.resources
 C:\Users\João Pires Barreira\Documents\GitHub\li4-1718\Kiddo\Kiddo\obj\Debug\Kiddo.Migrations.AddService.resources
 C:\Users\João Pires Barreira\Documents\GitHub\li4-1718\Kiddo\Kiddo\obj\Debug\Kiddo.Migrations.AddAdmin.resources
+C:\Users\João Pires Barreira\Documents\GitHub\li4-1718\Kiddo\Kiddo\obj\Debug\Kiddo.Migrations.AddNumberChildrenToService.resources
