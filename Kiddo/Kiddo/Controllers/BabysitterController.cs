@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -34,6 +35,17 @@ namespace Kiddo.Controllers
         public ActionResult MyServices()
         {
             return View(db.Services.ToList());
+        }
+
+        public ActionResult Map(string location)
+        {
+            ViewBag.location = location;
+            using (WebClient wc = new WebClient())
+            {
+                var json = wc.DownloadString("https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key=AIzaSyDZ-qqaC5w_dlt44HKSBnGDWi7-GoCLv3U");
+                ViewBag.json = json;
+            }
+            return View();
         }
     }
 }

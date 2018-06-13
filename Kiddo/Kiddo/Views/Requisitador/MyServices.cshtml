@@ -35,26 +35,26 @@
     {
         if (item.Requisitador.Email == @User.Identity.GetUserName())
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Babysitter.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Requisitador.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.duration)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.location)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.extra)
-                </td>
-            </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Babysitter.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Requisitador.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.extra)
+        </td>
+    </tr>
         }
     }
 

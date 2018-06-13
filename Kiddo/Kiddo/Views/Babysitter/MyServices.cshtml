@@ -55,11 +55,11 @@
                     @Html.DisplayFor(modelItem => item.extra)
                 </td>
                 <td>
-                    @Html.ActionLink("Rejeitar serviço", "Delete", "Services", new { id = item.Id }, null)
+                    @Html.ActionLink("Obter direcções", "Map", new { location = item.location }) | @Html.ActionLink("Rejeitar serviço", "Delete", "Services", new { id = item.Id }, null)
                 </td>
             </tr>
         }
-    }
+     }
 
 </table>
 

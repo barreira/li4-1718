@@ -351,6 +351,7 @@
     <Content Include="Views\Babysitter\About.cshtml" />
     <Content Include="Views\Babysitter\Contact.cshtml" />
     <Content Include="Views\Babysitter\MyServices.cshtml" />
+    <Content Include="Views\Babysitter\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

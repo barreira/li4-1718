@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_BabysitterLayout.cshtml";
+    @Styles.Render("~/Content/Home.css");
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>@ViewBag.location</h3>
+    <div id="map"></div>
+    <script>
+        var json = JSON.parse(@Html.Raw(Json.Encode(ViewBag.json)));
+        function initMap() {
+            var uluru = { lat: json.results[0].geometry.location.lat, lng: json.results[0].geometry.location.lng };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ-qqaC5w_dlt44HKSBnGDWi7-GoCLv3U&callback=initMap">
+    </script>
+</body>
+</html>
